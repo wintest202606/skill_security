@@ -1,0 +1,135 @@
+{
+  "last_updated": "2026-05-04",
+  "categories": {
+    "official_repos": [
+      {
+        "name": "Anthropic Skills",
+        "url": "https://github.com/anthropics/skills",
+        "type": "claude_official",
+        "notes": "Official Claude skill repository"
+      },
+      {
+        "name": "OpenClaw Skills Archive",
+        "url": "https://github.com/openclaw/skills",
+        "type": "openclaw_official",
+        "notes": "Full archive including historical and potentially malicious skills"
+      },
+      {
+        "name": "OpenClaw Core",
+        "url": "https://github.com/openclaw/openclaw",
+        "type": "runtime",
+        "notes": "Runtime + skill execution engine"
+      },
+      {
+        "name": "ClawHub",
+        "url": "https://github.com/openclaw/clawhub",
+        "type": "registry",
+        "notes": "Official OpenClaw skill registry"
+      }
+    ],
+    "large_skill_libraries": [
+      {
+        "name": "Claude Skills Collection",
+        "url": "https://github.com/alirezarezvani/claude-skills",
+        "type": "curated_library",
+        "notes": "200+ production-grade skills"
+      },
+      {
+        "name": "Antigravity Awesome Skills",
+        "url": "https://github.com/topics/claude-code-skills",
+        "type": "aggregated_topic",
+        "notes": "Large GitHub topic aggregation (~1400+)"
+      },
+      {
+        "name": "Awesome Agent Skills",
+        "url": "https://github.com/topics/claude-code-skills",
+        "type": "curated_collection",
+        "notes": "Curated multi-agent skill collection"
+      },
+      {
+        "name": "VoltAgent OpenClaw Skills",
+        "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+        "type": "openclaw_library",
+        "notes": "5000+ OpenClaw skills"
+      }
+    ],
+    "specialized_repos": [
+      {
+        "name": "Autonomys OpenClaw Skills",
+        "url": "https://github.com/autonomys/openclaw-skills",
+        "type": "advanced_skills",
+        "notes": "On-chain memory + persistent agent skills"
+      },
+      {
+        "name": "OpenClaw Box Skill",
+        "url": "https://github.com/box-community/openclaw-box-skill",
+        "type": "example_skill",
+        "notes": "Example production skill"
+      },
+      {
+        "name": "Win4r OpenClaw Skill",
+        "url": "https://github.com/win4r/OpenClaw-Skill",
+        "type": "example_skill",
+        "notes": "Standalone skill implementation"
+      },
+      {
+        "name": "Claude Code Skills Marketplace Repo",
+        "url": "https://github.com/daymade/claude-code-skills",
+        "type": "marketplace_repo",
+        "notes": "App-store style repo"
+      }
+    ],
+    "marketplaces_and_registries": [
+      {
+        "name": "SkillRepo",
+        "url": "https://skillrepo.dev/home",
+        "type": "search_index",
+        "notes": "Skill search engine"
+      },
+      {
+        "name": "SkillsMP",
+        "url": "https://skillsmp.com/",
+        "type": "aggregator",
+        "notes": "Large-scale skill aggregation (~400k+ skills)"
+      },
+      {
+        "name": "Skills.rest",
+        "url": "https://skills.rest/",
+        "type": "registry",
+        "notes": "OpenClaw ecosystem registry"
+      },
+      {
+        "name": "LobeHub Skills",
+        "url": "https://lobehub.com/tr/skills/netresearch-skill-repo-skill-skill-repo",
+        "type": "marketplace",
+        "notes": "Curated marketplace with CLI support"
+      },
+      {
+        "name": "AgentSkill.sh",
+        "url": "https://agentskill.sh/",
+        "type": "marketplace",
+        "notes": "110k+ skills with security scoring"
+      },
+      {
+        "name": "AgentSkills Marketplace",
+        "url": "https://agentskills.in/marketplace",
+        "type": "marketplace",
+        "notes": "40k+ skills, multi-agent support"
+      },
+      {
+        "name": "Agensi",
+        "url": "https://agensi.io/",
+        "type": "commercial_marketplace",
+        "notes": "Paid skills + security scanning"
+      }
+    ],
+    "emerging_and_protocol_layers": [
+      {
+        "name": "MCP Skill Markets",
+        "url": "https://vibecoding.app/alternative/mcp-market-skills-alternative",
+        "type": "protocol_market",
+        "notes": "Cross-agent MCP ecosystem"
+      }
+    ]
+  }
+}
