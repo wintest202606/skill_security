@@ -1,3 +1,23 @@
+ Fine-tuned MM-BERT performance summary:
+
+   Device                               Backend         Mean Latency    P95 Latency     Throughput
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━  ━━━━━━━━━━━━━  ━━━━━━━━━━━━━
+   NVIDIA RTX PRO 2000 Blackwell GPU    PyTorch BF16        14.19 ms       15.39 ms    70.45 req/s
+  ───────────────────────────────────  ──────────────  ──────────────  ─────────────  ─────────────
+   Intel Arc Pro 140T GPU               OpenVINO            25.45 ms       27.31 ms    39.29 req/s
+  ───────────────────────────────────  ──────────────  ──────────────  ─────────────  ─────────────
+   Intel AI Boost NPU                   OpenVINO            94.01 ms       94.35 ms    10.64 req/s
+  ───────────────────────────────────  ──────────────  ──────────────  ─────────────  ─────────────
+   Intel Core Ultra 9 285H CPU          PyTorch            272.52 ms      297.85 ms     3.67 req/s
+
+  The NVIDIA GPU is the fastest option. The Intel GPU delivers about 56% of NVIDIA’s throughput and is roughly 3.7× faster than the NPU. The NPU is about 2.9×
+  faster than CPU inference and is suitable for lower-power local deployment.
+
+  Model quality on the held-out 10,000-sample test set: 88.43% accuracy and 88.74% F1 score at a 0.5 threshold.
+
+  Benchmark configuration: batch size 1, fixed 512-token input, 20 warm-up runs, and 100 measured runs.
+  
+
 On the 7,876 validation examples both models processed, fine-tuned Kev-0.8B slightly outperformed fine-tuned MMBERT.
 
    Metric                          Kev-0.8B    MMBERT
