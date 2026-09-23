@@ -1,3 +1,32 @@
+On the 7,876 validation examples both models processed, fine-tuned Kev-0.8B slightly outperformed fine-tuned MMBERT.
+
+   Metric                          Kev-0.8B    MMBERT
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━  ━━━━━━━━
+   Accuracy                          89.12%    87.89%
+  ──────────────────────────────  ──────────  ────────
+   Precision                         90.45%    84.82%
+  ──────────────────────────────  ──────────  ────────
+   Recall                            83.95%    88.02%
+  ──────────────────────────────  ──────────  ────────
+   F1                                87.08%    86.39%
+  ──────────────────────────────  ──────────  ────────
+   NLL, lower is better              0.2513    0.2393
+  ──────────────────────────────  ──────────  ────────
+   Brier score, lower is better      0.0789    0.0796
+  ──────────────────────────────  ──────────  ────────
+   ECE, lower is better              0.0466    0.0164
+
+  Kev gained 1.23 points in accuracy and 0.69 points in F1, mostly because it produced fewer false positives. MMBERT had 4.07 points higher recall, so it missed
+  fewer injections. Its probabilities were also better calibrated.
+
+  The comparison has an important context-length caveat. Kev rejected 2,124 of 10,000 validation examples because they exceeded its 384-token limit, leaving 78.76%
+  coverage. MMBERT truncated inputs to 512 tokens and evaluated all 10,000 examples. On its full validation set, MMBERT reached 88.20% accuracy and 88.49% F1. On
+  its held-out test set, it reached 88.43% accuracy and 88.74% F1.
+
+  MMBERT's median NPU inference time on the common set was 95.8 ms. Kev's prior median latency was 174.0 ms, but the two measurements used different devices and
+  inference paths, so this is not a direct speed comparison.
+  
+  
   1. Objective
      Our fine-tuned MM-BERT model is a binary security classifier designed to detect prompt-injection attacks. Given an input prompt, it classifies the text as
      either benign or malicious, helping protect LLM applications from instruction-hijacking and data-exfiltration attempts.
